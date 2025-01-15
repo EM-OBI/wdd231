@@ -2,10 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Godwin Bassey">
+    <meta name="description" content="Course Home Page">
+    <title>Course Home Page</title>
+    <link rel="stylesheet" href="styles/course-home-page.css">
+    <link rel="stylesheet" href="styles/course-home-page-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/course-home-page.js" defer></script>
 </head>
 <body>
-    <h1>Godwin Bassey</h1>
+    <header>
+        <img src="images/godwin-bassey.webp" alt="godwin bassey picture" height="100" width="100" class="profile-picture" loading="lazy">
+        <h1>Godwin Bassey</h1>
+        <span class="hamburger disappear"></span>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/EM-OBI">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/godwin-bassey-15a28615a/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="home-page">
+        <section class="course-work">
+            <h2>Course Work</h2>
+        </section>
+        <section class="location">
+            <h2>Calabar, Nigeria</h2>
+            <img class="location-img" src="images/calabar-night.webp" alt="calabar night" width="350" height="350" class="calabar-night" loading="lazy">
+        </section>
+        <section class="course-list">
+            <h2 class="cert-heading">Web and Computer Programming Certificate</h2>
+        </section>
+    </main>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="current-year"></span><br>
+            Godwin Bassey<br>
+            Cross River State, Nigeria<br>
+        </p>
+        <p id="last-modified"></p>
+    </footer>
 </body>
 </html>
