@@ -49,7 +49,7 @@ h1 {
 }
 
 nav ul {
-    display: blcok;
+    display: block;
     background: #495867;
     flex-direction: column;
     list-style: none;
