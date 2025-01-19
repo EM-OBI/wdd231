@@ -1,0 +1,14 @@
+body {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+section {
+    text-align: center;
+}

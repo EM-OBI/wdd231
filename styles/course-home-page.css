@@ -31,7 +31,7 @@ h1 {
 }
 
 .hamburger::after {
-    content: "☰";
+    content: "\2630";
     display: inline-block;
     position: absolute;
     right: 0;
@@ -41,7 +41,7 @@ h1 {
 }
 
 .hamburger.show::after {
-    content: "x";
+    content: "\2716";
 }
 
 .nav-bar.show {
