@@ -1,0 +1,186 @@
+body {
+    background: #fcfaf9;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 48px auto 88px 3rem;
+    align-items: center;
+    background: #333;
+    color: #fcfaf9;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    cursor: pointer;
+    grid-column: 1 / 2;
+    padding: 0 0.5rem;
+}
+
+
+.big-heading {
+    grid-column: 2 / 3;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.small-heading {
+    font-size: .75rem;
+}
+
+.toggle-dark-mode {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    font-size: 2rem;
+}
+
+.navigation, .navigation.show {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+.navigation ul {
+    list-style: none;
+    overflow: hidden;
+    background: #48e5c2;
+    margin-top: 0;
+    height: auto;
+    align-items: center;
+}
+
+.navigation ul li {
+    width: 100%;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    width: 90%;
+    padding: 0.9rem 0.2rem;
+}
+
+.navigation ul li a:hover {
+    background: #333;
+    color: #fcfaf9;
+}
+
+.navigation.show {
+    grid-template-rows: 1fr;
+}
+
+.hamburger::before {
+    content: '\2630';
+    font-size: 3rem;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.hamburger.show::before {
+    content: "\2716";
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 1rem;
+    background: #333;
+    color: #fcfaf9;
+    margin-top: 2rem;
+}
+
+.social-media {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#fb, #x, #ig {
+    width: auto;
+    border-radius: 50%;
+}
+
+#directory {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.member {
+    border: 0.5px solid #333;
+    width: 80%;
+    max-width: 400px;
+    margin: 1rem auto;
+    border-radius: 10%;
+    box-shadow: 0.5rem 0.5rem;
+}
+
+.website {
+    color: blue;
+    text-decoration: underline;
+}
+
+.website:visited {
+    color: purple;
+}
+
+.website {
+    cursor: pointer;
+}
+
+.display-buttons {
+    text-align: right;
+    margin-right: 4rem;
+}
+
+.list-icon, .grid-icon {
+    cursor: pointer;
+}
+
+#directory.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#directory.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 3rem;
+    width: 100%;
+}
+
+#directory.list section:nth-child(odd) {
+    background: #eee;
+}
+
+
+.list section img, .list section .email, .list section .website, .list section .phone {
+    display: none;
+}
+
+#directory.list section {
+    border: none;
+    box-shadow: none;
+    align-items: center;
+}
+
+.active {
+    background: #ddd;
+    color: #fcfaf9;
+}
+
+.navigation .active-nav {
+    background: #333;
+    color: #fcfaf9;
+}

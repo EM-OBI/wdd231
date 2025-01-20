@@ -9,21 +9,55 @@
     <meta property="og:type" content="website" /> 
     <meta property="og:image" content="images/fb.webp"> 
     <meta property="og:url" content="https://em-obi.github.io/wdd231/chamber/directory.html">
-    <title>Calabar chamber directory page</title>
-    <link rel="icon" href="./favicon (1).ico">
+    <title>Calabar Dental Chamber Directory Page</title>
+    <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+    <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
-    <header>
-
+    <header class="header-content">
+        <img src="images/logo.svg" alt="calabar-dental-chamber-logo" width="44px" height="44px" class="logo">
+        <h1 class="big-heading">Calabar Dental<br><span class="small-heading">Chamber of Commerce</span></h1>
+        <img src="images/toggle-dark-mode.svg" alt="toggle-dark-mode" width="88px"  height="88px" class="toggle-dark-mode">
+        <span class="hamburger"></span>
     </header>
-    <main>
-
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+    <div class="display-buttons">
+        <img src="images/list-icon.svg" alt="list" width="50" height="50" class="list-icon">
+        <img src="images/grid-icon.svg" alt="grid" width="50" height="50" class="grid-icon">
+    </div>
+    <main id="directory">
     </main>
     <footer>
-
+        <div class="contact-info">
+            <p><strong>Calabar Dental Chamber of Commerce</strong></p>
+            <p>1234 Dental Avenue</p>
+            <p>cdcoc@gmail.com</p>
+            <p>080-1234-5678</p>
+        </div>
+        <div class="social-media">
+            <a href="https://facebook.com" id="fb"><img src="images/fb-icon.svg" alt="facebook-icon" width="60px" height="60px"></a>
+            <a href="https://x.com" id="x"><img src="images/x-icon.svg" alt="x-icon" width="60px" height="60px"></a>
+            <a href="https://instagram.com" id="ig"><img src="images/ig-icon.svg" alt="ig-icon" width="60px" height="60px"></a>
+        </div>
+        <div class="wdd-requirements">
+            <p>WDD 231 - Class Project</p>
+            <p>Godwin Bassey</p>
+            &copy;<span id="current-year"></span><br>
+            <p id="last-modified"></p>
+        </div>
     </footer>
 </body>
 </html>

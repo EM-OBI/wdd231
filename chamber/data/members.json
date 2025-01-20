@@ -1,0 +1,76 @@
+{
+   "members": [
+        {
+            "name": "Bright Smile Dental Care",
+            "address": "25 Marian Road, Calabar",
+            "phoneNumber": "+2348123456789",
+            "website": "www.brightsmile.com",
+            "image": "./images/brightsmile.svg",
+            "membershipLevel": "1",
+            "email": "brighsmile@email.com"
+        },
+        {
+            "name": "Pearl Dental Clinic",
+            "address": "12 Ndidem Usang Iso Road, Calabar",
+            "phoneNumber": "+2348029876543",
+            "website": "pearldentalclinic.com",
+            "image": "./images/pearldental.svg",
+            "membershipLevel": "3",
+            "email": "pearldental@email.com"
+        },
+        {
+            "name": "Evergreen Dental & Orthodontics",
+            "address": "18 MCC Road, Calabar",
+            "phoneNumber": "+2348065432190",
+            "website": "www.evergreendentalcalabar.com",
+            "image": "./images/evergreen.svg",
+            "membershipLevel": "2",
+            "email": "evergreendentalcalabar@email.com"
+        },
+        {
+            "name": "Prime Dental Solutions",
+            "address": "41 Marian Market Road, Calabar",
+            "phoneNumber": "+2349098765432",
+            "website": "www.primedentalng.com",
+            "image": "./images/primedental.svg",
+            "membershipLevel": "2",
+            "email": "primedentalng@email.com"
+        },
+        {
+            "name": "Calabar Dental Experts",
+            "address": "9 Etta Agbor Road, Calabar",
+            "phoneNumber": "+2348036457890",
+            "website": "www.calabardentalexperts.com",
+            "image": "./images/dentalexperts.svg",
+            "membershipLevel": "3",
+            "email": "calabardentalexperts@email.com"
+        },
+        {
+            "name": "Golden Tooth Dental Clinic",
+            "address": "15 Akai Efa Road, Calabar",
+            "phoneNumber": "+2347012345678",
+            "website": "www.goldentoothcalabar.com",
+            "image": "./images/goldentooth.svg",
+            "membershipLevel": "1",
+            "email": "goldentoothcalabar@email.com"
+        },
+        {
+            "name": "Family Dental Center",
+            "address": "32 IBB Way, Calabar",
+            "phoneNumber": "+2348053214567",
+            "website": "www.familydentalcalabar.com",
+            "image": "./images/familydental.svg",
+            "membershipLevel": "3",
+            "email": "familydentalcalabar@email.com"
+        },
+        {
+            "name": "Royal Care Dental Clinic",
+            "address": "25 Target Road, Calabar",
+            "phoneNumber": "+2348145678901",
+            "website": "www.royalcarecalabar.com",
+            "image": "./images/royalcare.svg",
+            "membershipLevel": "2",
+            "email": "royalcarecalabar@email.com"
+        } 
+    ]
+}
