@@ -16,6 +16,8 @@ dateLastModif.innerHTML = `<span>Last Modified: ${getLastModDate}/${getLastModMo
 // responsiveness
 const navItems = document.querySelector(".navigation");
 const hamburger = document.querySelector(".hamburger");
+const gridIcon = document.querySelector(".grid-icon");
+const listIcon = document.querySelector(".list-icon");
 
 hamburger.addEventListener("click", () => {
     navItems.classList.toggle("show");
@@ -30,6 +32,7 @@ async function getMembers() {
     if (response.ok) {
         const data = await response.json();
         if (currentPage === '/chamber/directory.html') {
+            gridIcon.classList.add("active");
             displayMembers(data.members);
         } else if (currentPage === "/chamber/index.html") {
             displayMembers(generateRandomMembers(data.members, 3));
@@ -38,7 +41,6 @@ async function getMembers() {
         console.table(generateRandomMembers(data.members, 3));
 
     }
-    gridIcon.classList.add("active");
 }
 
 // getMembers();
@@ -113,8 +115,6 @@ const displayMembers = (members) => {
 getMembers();
 
 function toggleListGrid() {
-    const gridIcon = document.querySelector(".grid-icon");
-    const listIcon = document.querySelector(".list-icon");
     gridIcon.classList.add("active");
 
     gridIcon.addEventListener("click", () => {
