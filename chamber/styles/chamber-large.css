@@ -1,12 +1,11 @@
 @media screen and (min-width: 320px) {
+
     main {
         max-width: 960px;
         margin: 0 auto; 
-        padding: 0 10px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
-        font-family: "Roboto Condensed", serif;
     }
 
     .hamburger {
@@ -17,7 +16,6 @@
         display: grid;
         grid-template-columns: 48px auto 88px;
         align-items: center;
-        font-family: "Noto Serif", serif;;
     }
     
     .logo {
@@ -39,7 +37,7 @@
         grid-column: 3 / 4;
         font-size: 2rem;
     }
-    
+
     .navigation, .navigation.show {
         grid-template-rows: 1fr;
         font-family: "Roboto Condensed", serif;
@@ -58,7 +56,7 @@
     footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
+        grid-gap: 3rem;
         font-family: "Roboto Condensed", serif;
     }
 
@@ -69,6 +67,19 @@
     #directory {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    #events-weather {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: auto;
+        grid-column: 1 / 4;
+    }
+
+    #business-highlights {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
 }

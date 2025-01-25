@@ -29,14 +29,23 @@ async function getMembers() {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
-        displayMembers(data.members);
+        if (currentPage === '/chamber/directory.html') {
+            displayMembers(data.members);
+        } else if (currentPage === "/chamber/index.html") {
+            displayMembers(generateRandomMembers(data.members, 3));
+        }
         console.table(data.members);
+        console.table(generateRandomMembers(data.members, 3));
+
     }
     gridIcon.classList.add("active");
 }
+
 // getMembers();
 
 const directory = document.querySelector("#directory");
+const homePage = document.querySelector("#home-page");
+const businessHighlights = document.querySelector("#business-highlights");
 
 const displayMembers = (members) => {
     members.forEach(member => {
@@ -91,28 +100,37 @@ const displayMembers = (members) => {
     email.setAttribute("class", "email");
     section.appendChild(email);
 
-    directory.appendChild(section);
+    if (currentPage === '/chamber/directory.html') {
+        directory.appendChild(section);
+        section.classList.remove("spotlight-section");
+    } else if (currentPage === '/chamber/index.html') {
+        businessHighlights.appendChild(section);
+        section.classList.add("spotlight-section");
+    }
   });  
 }
 
 getMembers();
 
-const gridIcon = document.querySelector(".grid-icon");
-const listIcon = document.querySelector(".list-icon");
-
-gridIcon.addEventListener("click", () => {
-    directory.classList.add("grid");
-    directory.classList.remove("list");
+function toggleListGrid() {
+    const gridIcon = document.querySelector(".grid-icon");
+    const listIcon = document.querySelector(".list-icon");
     gridIcon.classList.add("active");
-    listIcon.classList.remove("active");
-});
 
-listIcon.addEventListener("click", () => {
-    directory.classList.add("list");
-    directory.classList.remove("grid");
-    listIcon.classList.add("active");
-    gridIcon.classList.remove("active");
-});
+    gridIcon.addEventListener("click", () => {
+        directory.classList.add("grid");
+        directory.classList.remove("list");
+        gridIcon.classList.add("active");
+        listIcon.classList.remove("active");
+    });
+
+    listIcon.addEventListener("click", () => {
+        directory.classList.add("list");
+        directory.classList.remove("grid");
+        listIcon.classList.add("active");
+        gridIcon.classList.remove("active");
+    });
+}
 
 //wayfinding
 const navigationLinks = document.querySelectorAll(".navigation a");
@@ -126,3 +144,109 @@ navigationLinks.forEach(link => {
         link.classList.remove("active-nav");
     }
 });
+
+
+if (currentPage === '/chamber/directory.html') {
+    toggleListGrid();
+}
+
+
+//get weather info
+const weatherIcon = document.querySelector("#weather-icon");
+const currentWeatherInfo = document.querySelector("#current-weather-info");
+const forecastInfo = document.querySelector("#forecast-info");
+const urlWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=4.98&lon=8.34&units=metric&appid=ac0ae799a1d779dd4c23068666bc18f1';
+const urlForecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=4.98&lon=8.34&units=metric&appid=ac0ae799a1d779dd4c23068666bc18f1';
+
+//fetch current weather
+async function apiFetch() {
+    try {
+        const response = await fetch(urlWeather);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayData(data);
+        } else {
+            throw Error('Error:', await response.text());
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+apiFetch();
+
+//fetch forecast weather
+async function apiFetchForecast() {
+    try {
+        const response = await fetch(urlForecast);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayForecast(data);
+        } else {
+            throw Error('Error:', await response.text());
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+apiFetchForecast();
+
+//display data
+
+function displayData(data) {
+    const sunrise =  `${data.sys.sunrise}`
+    const sunset =  `${data.sys.sunset}`
+
+    function capitalizeFirstLetter(sentence) {
+        return sentence.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+    }
+    
+    function formatUnixTimestampToTime(timestamp) {
+        return new Date(timestamp * 1000).toLocaleString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true, 
+            timeZone: "UTC" 
+        });
+    }
+
+    weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/04d.png`);
+    weatherIcon.setAttribute("alt", `${capitalizeFirstLetter(data.weather[0].description)} icon`);
+    currentWeatherInfo.innerHTML = `<div class="individual-weather"><strong>Temp:</strong> ${data.main.temp.toFixed(1)}°C</div>
+    <div class="individual-weather"><strong>Description:</strong> ${capitalizeFirstLetter(data.weather[0].description)}</div>
+    <div class="individual-weather"><strong>High:</strong> ${data.main.temp_max.toFixed(1)}°C</div> 
+    <div class="individual-weather"><strong>Low:</strong> ${data.main.temp_min.toFixed(1)}°C</div> 
+    <div class="individual-weather"><strong>Sunrise:</strong> ${formatUnixTimestampToTime(sunrise)}</div> 
+    <div class="individual-weather"><strong>Sunset:</strong> ${formatUnixTimestampToTime(sunset)}</div>`;
+}
+
+//display forecasted weather
+
+function displayForecast(data) {
+    data.list.forEach(forecast => {
+        if (forecast.dt_txt.includes("00:00:00")) {
+            const forecastDate = new Date(forecast.dt_txt);
+            const day = forecastDate.toLocaleString("en-US", {
+                weekday: "long"
+            });
+            console.log(day);
+            console.log(forecast.main.temp);
+            forecastInfo.innerHTML += `<div class="individual-forecast"><strong>${day}</strong>: ${forecast.main.temp.toFixed(1)}°C </div>`;
+        }
+    });
+} 
+
+const generateRandomMembers = (members, count) => {
+    const silverGoldMembers = members.filter(member => member.membershipLevel === "2" || member.membershipLevel === "3");
+    
+    const shuffledMembers = [...silverGoldMembers].sort(() => 0.5 - Math.random());
+    
+    return shuffledMembers.slice(0, count);
+}
+
+
+//to-do list - generate random two/three businesses to display
