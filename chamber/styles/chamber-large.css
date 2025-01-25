@@ -72,7 +72,6 @@
     #events-weather {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        max-width: auto;
         grid-column: 1 / 4;
     }
 

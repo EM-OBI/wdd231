@@ -214,8 +214,7 @@ function displayData(data) {
         });
     }
 
-    weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/04d.png`);
-    weatherIcon.setAttribute("alt", `${capitalizeFirstLetter(data.weather[0].description)} icon`);
+    weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/04d.png" alt="${capitalizeFirstLetter(data.weather[0].description)} icon">`
     currentWeatherInfo.innerHTML = `<div class="individual-weather"><strong>Temp:</strong> ${data.main.temp.toFixed(1)}°C</div>
     <div class="individual-weather"><strong>Description:</strong> ${capitalizeFirstLetter(data.weather[0].description)}</div>
     <div class="individual-weather"><strong>High:</strong> ${data.main.temp_max.toFixed(1)}°C</div> 
