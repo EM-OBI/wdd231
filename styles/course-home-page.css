@@ -88,12 +88,26 @@ nav ul {
     text-align: center;
 }
 
+.course-work {
+    min-height: 350px;
+}
+
 .course-banner {
     margin: 0 auto;
     width: 360px;
     margin: 1rem auto;
     background: #eee;
     border-radius: 5px;
+    animation: slide-in 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s 1 forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translate(0%);
+    }
 }
 
 .style-completed {
@@ -109,6 +123,18 @@ nav ul {
 .total-credits {
     font-weight: 800;
 }
+
+#course-details {
+    width: 300px;
+    height: 400px;
+    min-height: 400px;
+}
+
+::backdrop {
+    background: #495867;
+    opacity: 0.3;
+}
+
 
 .cse, .wdd, .all {
     width: 5rem;

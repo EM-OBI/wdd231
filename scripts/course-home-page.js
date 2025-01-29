@@ -17,6 +17,20 @@ dateLastModif.innerHTML = `<span>Last Modified: ${getLastModDate}/${getLastModMo
 const navItems = document.querySelector(".nav-bar");
 const hamburger = document.querySelector(".hamburger");
 const homePage = document.querySelector(".home-page");
+const courseDetails = document.querySelector("#course-details");
+
+courseDetails.addEventListener("click", (event) => {
+    const rect = courseDetails.getBoundingClientRect();
+    console.log(event);
+    if (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ) {
+        courseDetails.close();
+    }
+});
 
 hamburger.addEventListener("click", () => {
     navItems.classList.toggle("show");
@@ -153,6 +167,7 @@ function createButtons() {
         createCourse(courses);
         totalCredits(courses);
     });
+
 }
 
 function totalCredits (courses) {
@@ -179,9 +194,34 @@ function createCourse(filteredCourses) {
         courseBanner.append(courseName);
         courseList.append(courseBanner);
     });
-
+    displayModal();
     return filteredCourses
 }
+
+
+function displayModal() {
+    const courseListItems = document.querySelectorAll(".course-banner");
+    const close = document.createElement("button");
+    close.textContent = "Close";
+    close.classList.add("close-button");
+
+    if (!courseDetails.querySelector(".close-button")) {
+        courseDetails.appendChild(close);
+    }
+
+
+    courseListItems.forEach(courseListItem => {
+        courseListItem.addEventListener("click", () => {
+            courseDetails.showModal();
+        })
+    });
+
+    close.addEventListener("click", ()=> {
+        courseDetails.close();
+    });
+
+}
+
 
 createButtons();
 
@@ -189,3 +229,4 @@ createCourse(courses);
 
 totalCredits(courses);
 
+// displayModal();
