@@ -25,7 +25,7 @@ hamburger.addEventListener("click", () => {
 });
 
 //request json data
-const url = "https://em-obi.github.io/wdd231/chamber/data/members.json"
+const url = "./data/members.json"
 
 async function getMembers() {
     const response = await fetch(url);
@@ -246,7 +246,7 @@ const generateRandomMembers = (members, count) => {
 }
 
 //display membership cards
-const mem = "https://em-obi.github.io/wdd231/chamber/data/membership.json"
+const mem = "./data/membership.json"
 
 async function getMembershipData() {
     try {
