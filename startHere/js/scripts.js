@@ -1,6 +1,6 @@
-const url = window.location.href
+const thankUrl = window.location.href
 
-const details = url.split("?")[1].split("&");
+const details = thankUrl.split("?")[1].split("&");
 let results = document.querySelector("#results");
 
 function displayInfo(info) {

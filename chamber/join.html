@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Godwin Bassey">
-    <meta name="description" content="Calabar dental chamber of commerce directory page containing a list of local private-owned dental clinics in Calabar">
+    <meta name="description" content="Calabar dental chamber of commerce join page containing a form for aspiring members.">
     <meta property="og:title" content="Calabar Dental Chamber of Commerce"> 
     <meta property="og:type" content="website"> 
     <meta property="og:image" content="https://em-obi.github.io/wdd231/chamber/images/fb.jpeg"> 
-    <meta property="og:url" content="https://em-obi.github.io/wdd231/chamber/directory.html">
-    <title>Calabar Dental Chamber Directory Page</title>
+    <meta property="og:url" content="https://em-obi.github.io/wdd231/chamber/join.html">
+    <title>Join Calabar Dental Chamber of Commerce</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
@@ -34,11 +34,42 @@
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
-    <div class="display-buttons">
-        <img src="images/list-icon.svg" alt="list" width="50" height="50" class="list-icon">
-        <img src="images/grid-icon.svg" alt="grid" width="50" height="50" class="grid-icon">
-    </div>
-    <main id="directory">
+    <main id="join">
+        <form action="thankyou.html" method="get" class="join-form">
+            <div class="form-desc">Required Field<span class="asterisk">*</span></div>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label>First Name<span class="asterisk">*</span> <input type="text" name="fname" autocomplete="given-name" title="User first name" required></label>
+
+                <label>Last Name<span class="asterisk">*</span> <input type="text" name="lname" autocomplete="family-name" title="User last name" required></label>
+
+                <label>Organizational Title<input type="text" name="orgtitle" autocomplete="organization-title" pattern="^[A-Za-z\s-]{7,}$" title="Title in user organization"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <label>Email<span class="asterisk">*</span> <input type="email" autocomplete="email" name="email" placeholder="example@email.com" title="User email" required></label>
+
+                <label>Phone Number<span class="asterisk">*</span> <input type="tel" autocomplete="tel" name="phonenumber" title="User phone number" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Dental Clinic Information</legend>
+
+                <label>Clinic Name<span class="asterisk">*</span> <input type="text" name="clinicname" title="Clinic Name" autocomplete="organization" required></label>
+
+                <label>Describe your Clinic <textarea name="clinicdesc" title="Description Clinic"></textarea></label>
+            </fieldset>
+            <fieldset id="membership-level">
+                <legend>Membership Level</legend>
+                <label><input type="radio" name="level" id="np" value="np" required>Non-profit Membership (free)</label>
+                <label><input type="radio" name="level" id="bronze" value="bronze">Bronze Membership</label>
+                <label><input type="radio" name="level" id="silver" value="silver">Silver Membership</label>
+                <label><input type="radio" name="level" id="gold" value="gold">Gold Membership</label>
+            </fieldset>
+            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="submit" id="submit" value="Join Now">
+        </form>
     </main>
     <footer>
         <div class="contact-info">

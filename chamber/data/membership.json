@@ -1,0 +1,24 @@
+{
+    "membership": [
+         {
+            "name": "Non Profit Membership Level",
+            "level": "np",
+            "description": "Ideal for charitable organizations and NGOs, our Non-Profit Membership offers networking opportunities, advocacy support, and discounted access to industry events. Join us in promoting community-driven dental health initiatives."
+         },
+         {
+            "name": "Bronze Membership Level",
+            "level": "bro",
+            "description": "A great starting point for small dental practices, the Bronze Membership provides essential business resources, directory listing, and access to select workshops. Build your connections and enhance your clinic’s reputation."
+         },
+         {
+            "name": "Silver Membership Level",
+            "level": "sil",
+            "description": "Designed for growing dental clinics, Silver Membership includes enhanced promotional opportunities, priority event invitations, and discounted continuing education programs. Stay ahead with exclusive industry insights and networking."
+         },
+         {
+            "name": "Gold Membership Level",
+            "level": "gol",
+            "description": "Our premier membership level, Gold Members enjoy top-tier benefits, including VIP event access, premium advertising, leadership opportunities, and personalized business support. Elevate your practice with unparalleled exposure and industry influence."
+         }
+     ]
+ }

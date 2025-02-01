@@ -81,4 +81,32 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
+    main#join {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main#thank-you {
+        display: block;
+    }
+
+    form.join-form {
+        grid-column: 1 / 2;
+        margin: 1rem auto;
+        width: 320px;
+    }
+
+    div.membership {
+        margin-top: 5rem;
+        justify-self: center;
+    }
+
+    section.indv-membership {
+        max-width: 320px;
+
+    }
+
+    .modal {
+        max-width: 33%;
+    }
 }

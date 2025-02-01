@@ -209,7 +209,6 @@ function displayModal() {
         courseDetails.appendChild(close);
     }
 
-
     courseListItems.forEach(courseListItem => {
         courseListItem.addEventListener("click", () => {
             courseDetails.showModal();
