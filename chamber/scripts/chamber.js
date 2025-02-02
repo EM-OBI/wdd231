@@ -31,6 +31,7 @@ async function getMembers() {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
+        console.log(data)
         if (currentPage === '/chamber/directory.html') {
             gridIcon.classList.add("active");
             displayMembers(data.members);
