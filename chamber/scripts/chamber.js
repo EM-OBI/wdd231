@@ -33,11 +33,11 @@ async function getMembers() {
         const data = await response.json();
         console.log(data);
         console.log(data.members);
-        if (currentPage === '/wdd231/chamber/directory.html') {
-        gridIcon.classList.add("active");
-        displayMembers(data.members);
-        } else if (currentPage === "/wddd231/chamber/index.html") {
-        displayMembers(generateRandomMembers(data.members, 3));
+        if (currentPage === "/wdd231/chamber/directory.html") {
+            gridIcon.classList.add("active");
+            displayMembers(data.members);
+        } else if (currentPage === "/wdd231/chamber/index.html") {
+            displayMembers(generateRandomMembers(data.members, 3));
         }
     }
 }
@@ -145,7 +145,7 @@ navigationLinks.forEach(link => {
 });
 
 
-if (currentPage === '/chamber/directory.html') {
+if (currentPage === '/wdd231/chamber/directory.html') {
     toggleListGrid();
 }
 
