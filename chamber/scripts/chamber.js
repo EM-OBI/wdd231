@@ -129,7 +129,7 @@ function toggleListGrid() {
     });
 }
 
-//wayfinding
+//navbar wayfinding 
 const navigationLinks = document.querySelectorAll(".navigation a");
 
 const currentPage = window.location.pathname;
