@@ -101,13 +101,13 @@ const displayMembers = (members) => {
     email.setAttribute("class", "email");
     section.appendChild(email);
 
-    if (currentPage === '/chamber/directory.html') {
+    // if (currentPage === '/chamber/directory.html') {
         directory.appendChild(section);
         section.classList.remove("spotlight-section");
-    } else if (currentPage === '/chamber/index.html') {
+    // } else if (currentPage === '/chamber/index.html') {
         businessHighlights.appendChild(section);
         section.classList.add("spotlight-section");
-    }
+    // }
   });  
 }
 
