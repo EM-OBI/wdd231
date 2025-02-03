@@ -344,9 +344,9 @@ function displayModal(card) {
     }
 }
 
-
-getMembershipData();
-
+if (currentPage.includes("join.html")) {
+    getMembershipData();
+}
 //to-do - create modal, design thank you page
 
 if (currentPage === '/wdd231/chamber/join.html') {
