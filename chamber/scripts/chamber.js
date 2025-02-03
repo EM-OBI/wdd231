@@ -34,10 +34,10 @@ async function getMembers() {
         console.log(data);
         console.log(data.members);
         // if (currentPage === '/chamber/directory.html') {
-            gridIcon.classList.add("active");
-            displayMembers(data.members);
+        gridIcon.classList.add("active");
+        displayMembers(data.members);
         // } else if (currentPage === "/chamber/index.html") {
-            displayMembers(generateRandomMembers(data.members, 3));
+        displayMembers(generateRandomMembers(data.members, 3));
         // }
     }
 }
@@ -101,13 +101,13 @@ const displayMembers = (members) => {
     email.setAttribute("class", "email");
     section.appendChild(email);
 
-    // if (currentPage === '/chamber/directory.html') {
+    if (currentPage === '/chamber/directory.html') {
         directory.appendChild(section);
         section.classList.remove("spotlight-section");
-    // } else if (currentPage === '/chamber/index.html') {
+    } else if (currentPage === '/chamber/index.html') {
         businessHighlights.appendChild(section);
         section.classList.add("spotlight-section");
-    // }
+    }
   });  
 }
 
@@ -212,7 +212,7 @@ function displayData(data) {
             timeZone: "UTC" 
         });
     }
-
+    if (currentPage === "/chamber/index.html") {
         weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/04d.png" alt="${capitalizeFirstLetter(data.weather[0].description)} icon">`
         currentWeatherInfo.innerHTML = `<div class="individual-weather"><strong>Temp:</strong> ${data.main.temp.toFixed(1)}°C</div>
         <div class="individual-weather"><strong>Description:</strong> ${capitalizeFirstLetter(data.weather[0].description)}</div>
@@ -220,7 +220,7 @@ function displayData(data) {
         <div class="individual-weather"><strong>Low:</strong> ${data.main.temp_min.toFixed(1)}°C</div> 
         <div class="individual-weather"><strong>Sunrise:</strong> ${formatUnixTimestampToTime(sunrise)}</div> 
         <div class="individual-weather"><strong>Sunset:</strong> ${formatUnixTimestampToTime(sunset)}</div>`;
-    
+    }
 }
 
 //display forecasted weather
