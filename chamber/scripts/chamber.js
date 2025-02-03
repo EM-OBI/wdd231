@@ -348,9 +348,8 @@ function displayModal(card) {
 getMembershipData();
 
 //to-do - create modal, design thank you page
-const timestampInput = document.querySelector("#timestamp");
 
-if (currentPage === '/chamber/join.html') {
+if (currentPage === '/wdd231/chamber/join.html') {
     document.addEventListener("DOMContentLoaded", function () {
         
         if (timestampInput && !timestampInput.value) {
@@ -358,6 +357,8 @@ if (currentPage === '/chamber/join.html') {
         }
     });
 }
+
+const timestampInput = document.querySelector("#timestamp");
 
 if (currentPage === "/wdd231/chamber/thankyou.html") {
 
