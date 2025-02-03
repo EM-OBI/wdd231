@@ -33,10 +33,10 @@ async function getMembers() {
         const data = await response.json();
         console.log(data);
         console.log(data.members);
-        if (currentPage === "/wdd231/chamber/directory.html") {
+        if (currentPage.includes("directory.html")) {
             gridIcon.classList.add("active");
             displayMembers(data.members);
-        } else if (currentPage === "/wdd231/chamber/index.html") {
+        } else if (currentPage.includes("index.html")) {
             displayMembers(generateRandomMembers(data.members, 3));
         }
     }
@@ -101,10 +101,10 @@ const displayMembers = (members) => {
     email.setAttribute("class", "email");
     section.appendChild(email);
 
-    if (currentPage === "/wdd231/chamber/directory.html") {
+    if (currentPage.includes("directory.html")) {
         directory.appendChild(section);
         section.classList.remove("spotlight-section");
-    } else if (currentPage === "/wdd231/chamber/index.html") {
+    } else if (currentPage.includes("index.html")) {
         businessHighlights.appendChild(section);
         section.classList.add("spotlight-section");
     }
@@ -145,7 +145,7 @@ navigationLinks.forEach(link => {
 });
 
 
-if (currentPage === '/wdd231/chamber/directory.html') {
+if (currentPage.includes("directory.html")) {
     toggleListGrid();
 }
 
@@ -189,7 +189,7 @@ async function apiFetchForecast() {
     }
 };
 
-if (currentPage === '/wdd231/chamber/index.html') {
+if (currentPage.includes("index.html")) {
     apiFetchForecast();
 }
 
@@ -349,7 +349,7 @@ if (currentPage.includes("join.html")) {
 }
 //to-do - create modal, design thank you page
 
-if (currentPage === '/wdd231/chamber/join.html') {
+if (currentPage.includes("join.html")) {
     document.addEventListener("DOMContentLoaded", function () {
         
         if (timestampInput && !timestampInput.value) {
@@ -360,7 +360,7 @@ if (currentPage === '/wdd231/chamber/join.html') {
 
 const timestampInput = document.querySelector("#timestamp");
 
-if (currentPage === "/wdd231/chamber/thankyou.html") {
+if (currentPage.includes("thankyou.html")) {
 
     const thankUrl = window.location.href
 
