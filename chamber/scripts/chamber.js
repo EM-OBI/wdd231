@@ -33,16 +33,16 @@ async function getMembers() {
         const data = await response.json();
         console.log(data);
         console.log(data.members);
-        if (currentPage === '/chamber/directory.html') {
-            gridIcon.classList.add("active");
-            displayMembers(data.members);
-        } else if (currentPage === "/chamber/index.html") {
-            displayMembers(generateRandomMembers(data.members, 3));
-        }
+        // if (currentPage === '/chamber/directory.html') {
+        gridIcon.classList.add("active");
+        displayMembers(data.members);
+        // } else if (currentPage === "/chamber/index.html") {
+        displayMembers(generateRandomMembers(data.members, 3));
+        // }
     }
 }
 
-// getMembers();
+getMembers();
 
 const directory = document.querySelector("#directory");
 const homePage = document.querySelector("#home-page");
