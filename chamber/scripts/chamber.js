@@ -33,12 +33,12 @@ async function getMembers() {
         const data = await response.json();
         console.log(data);
         console.log(data.members);
-        // if (currentPage === '/chamber/directory.html') {
-        gridIcon.classList.add("active");
-        displayMembers(data.members);
-        // } else if (currentPage === "/chamber/index.html") {
-        displayMembers(generateRandomMembers(data.members, 3));
-        // }
+        if (currentPage === '/chamber/directory.html') {
+            gridIcon.classList.add("active");
+            displayMembers(data.members);
+        } else if (currentPage === "/chamber/index.html") {
+            displayMembers(generateRandomMembers(data.members, 3));
+        }
     }
 }
 
@@ -346,9 +346,11 @@ function displayModal(card) {
     }
 }
 
-if (currentPage === '/chamber/join.html') {
-    getMembershipData();
-}
+
+getMembershipData();
+// if (currentPage === '/chamber/join.html') {
+    
+// }
 
 //to-do - create modal, design thank you page
 const timestampInput = document.querySelector("#timestamp");
