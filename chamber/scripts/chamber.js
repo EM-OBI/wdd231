@@ -101,10 +101,10 @@ const displayMembers = (members) => {
     email.setAttribute("class", "email");
     section.appendChild(email);
 
-    if (currentPage === '/wdd231/chamber/directory.html') {
+    if (currentPage === "/wdd231/chamber/directory.html") {
         directory.appendChild(section);
         section.classList.remove("spotlight-section");
-    } else if (currentPage === '/wdd231/chamber/index.html') {
+    } else if (currentPage === "/wdd231/chamber/index.html") {
         businessHighlights.appendChild(section);
         section.classList.add("spotlight-section");
     }
