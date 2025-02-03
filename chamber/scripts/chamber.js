@@ -32,11 +32,11 @@ async function getMembers() {
     if (response.ok) {
         const data = await response.json();
         console.log(data);
-        if (currentPage === '/chamber/directory.html') {
+        if (currentPage === 'wdd231/chamber/directory.html') {
             gridIcon.classList.add("active");
             displayMembers(data.members);
             alert(data.members[0].name);
-        } else if (currentPage === "/chamber/index.html") {
+        } else if (currentPage === "wdd231/chamber/index.html") {
             displayMembers(generateRandomMembers(data.members, 3));
         }
     }
