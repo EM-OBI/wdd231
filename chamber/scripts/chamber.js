@@ -189,7 +189,7 @@ async function apiFetchForecast() {
     }
 };
 
-if (currentPage === '/chamber/index.html') {
+if (currentPage === '/wdd231/chamber/index.html') {
     apiFetchForecast();
 }
 
