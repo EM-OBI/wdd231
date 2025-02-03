@@ -25,7 +25,7 @@ hamburger.addEventListener("click", () => {
 });
 
 //request json data
-const url = "/wdd231/chamber/data/members.json"
+const url = "scripts/members.json"
 
 async function getMembers() {
     const response = await fetch(url);
@@ -33,7 +33,7 @@ async function getMembers() {
         const data = await response.json();
         console.log(data);
         console.log(data.members);
-        if (currentPage === '/wdd231/chamber/directory.html') {
+        if (currentPage === '/chamber/directory.html') {
             gridIcon.classList.add("active");
             displayMembers(data.members);
             alert(data.members[0].name);
@@ -249,7 +249,7 @@ const generateRandomMembers = (members, count) => {
 }
 
 //display membership cards
-const mem = "/wdd231/chamber/data/membership.json"
+const mem = "scripts/membership.json"
 
 async function getMembershipData() {
     try {
