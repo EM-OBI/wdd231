@@ -25,7 +25,7 @@ hamburger.addEventListener("click", () => {
 });
 
 //request json data
-const url = "/chamber/data/members.json"
+const url = "/wdd231/chamber/data/members.json"
 
 async function getMembers() {
     const response = await fetch(url);
@@ -248,7 +248,7 @@ const generateRandomMembers = (members, count) => {
 }
 
 //display membership cards
-const mem = "/chamber/data/membership.json"
+const mem = "/wdd231/chamber/data/membership.json"
 
 async function getMembershipData() {
     try {
