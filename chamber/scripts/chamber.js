@@ -25,13 +25,13 @@ hamburger.addEventListener("click", () => {
 });
 
 //request json data
-const url = "./data/members.json"
+const url = "/chamber/data/members.json"
 
 async function getMembers() {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
-        console.log(data)
+        console.log(data);
         if (currentPage === '/chamber/directory.html') {
             gridIcon.classList.add("active");
             displayMembers(data.members);
@@ -247,7 +247,7 @@ const generateRandomMembers = (members, count) => {
 }
 
 //display membership cards
-const mem = "./data/membership.json"
+const mem = "/chamber/data/membership.json"
 
 async function getMembershipData() {
     try {
