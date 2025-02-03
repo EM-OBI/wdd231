@@ -42,8 +42,6 @@ async function getMembers() {
     }
 }
 
-getMembers();
-
 const directory = document.querySelector("#directory");
 const homePage = document.querySelector("#home-page");
 const businessHighlights = document.querySelector("#business-highlights");
