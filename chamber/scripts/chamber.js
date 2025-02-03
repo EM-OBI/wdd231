@@ -101,10 +101,10 @@ const displayMembers = (members) => {
     email.setAttribute("class", "email");
     section.appendChild(email);
 
-    if (currentPage === '/chamber/directory.html') {
+    if (currentPage === '/wdd231/chamber/directory.html') {
         directory.appendChild(section);
         section.classList.remove("spotlight-section");
-    } else if (currentPage === '/chamber/index.html') {
+    } else if (currentPage === '/wdd231/chamber/index.html') {
         businessHighlights.appendChild(section);
         section.classList.add("spotlight-section");
     }
@@ -212,7 +212,7 @@ function displayData(data) {
             timeZone: "UTC" 
         });
     }
-    if (currentPage === "/chamber/index.html") {
+    if (currentPage === "/wdd231/chamber/index.html") {
         weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/04d.png" alt="${capitalizeFirstLetter(data.weather[0].description)} icon">`
         currentWeatherInfo.innerHTML = `<div class="individual-weather"><strong>Temp:</strong> ${data.main.temp.toFixed(1)}°C</div>
         <div class="individual-weather"><strong>Description:</strong> ${capitalizeFirstLetter(data.weather[0].description)}</div>
