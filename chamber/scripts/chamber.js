@@ -361,7 +361,8 @@ if (currentPage === '/chamber/join.html') {
     });
 }
 
-    
+if (currentPage === "/wdd231/chamber/thankyou.html") {
+
     const thankUrl = window.location.href
 
     const details = thankUrl.split("?")[1].split("&");
@@ -420,3 +421,4 @@ if (currentPage === '/chamber/join.html') {
         Time Submitted: ${formattedTimestamp}
     </div>
     `
+}
