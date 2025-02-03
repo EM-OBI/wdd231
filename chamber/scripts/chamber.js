@@ -348,9 +348,6 @@ function displayModal(card) {
 
 
 getMembershipData();
-// if (currentPage === '/chamber/join.html') {
-    
-// }
 
 //to-do - create modal, design thank you page
 const timestampInput = document.querySelector("#timestamp");
@@ -364,7 +361,6 @@ if (currentPage === '/chamber/join.html') {
     });
 }
 
-if (currentPage === '/chamber/thankyou.html') {
     
     const thankUrl = window.location.href
 
@@ -423,5 +419,4 @@ if (currentPage === '/chamber/thankyou.html') {
         <br>
         Time Submitted: ${formattedTimestamp}
     </div>
-`
-}
+    `
