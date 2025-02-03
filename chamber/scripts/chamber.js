@@ -32,7 +32,8 @@ async function getMembers() {
     if (response.ok) {
         const data = await response.json();
         console.log(data);
-        if (currentPage === 'wdd231/chamber/directory.html') {
+        console.log(data.members);
+        if (currentPage === '/wdd231/chamber/directory.html') {
             gridIcon.classList.add("active");
             displayMembers(data.members);
             alert(data.members[0].name);
