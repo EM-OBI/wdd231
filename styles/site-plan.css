@@ -1,0 +1,45 @@
+#header {
+    text-align: center;
+    height: auto;
+    background: #229f57;
+}
+
+#site-plan {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#header h1 {
+    margin: 0;
+    padding-top: 10px;
+}
+
+h2 {
+    color: #394b3e;
+    text-align: center;
+}
+
+#header h1, h2 {
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    font-family: "Inter", serif;
+    color: #222222;
+}
+
+span {
+    color: #d72638;
+}
+
+footer {
+    height: auto;
+    background: #229f57;
+    display: flex;
+    justify-content: center;
+}
+
+footer span {
+    color: black;
+}
