@@ -1,4 +1,4 @@
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 64rem) {
 
     main {
         max-width: 960px;
@@ -60,6 +60,11 @@
         font-family: "Roboto Condensed", serif;
     }
 
+    div.visit-message {
+        grid-column: 1 / 4;
+        text-align: center;
+    }
+
     .social-media {
         align-self: center;
     }
@@ -108,5 +113,20 @@
 
     .modal {
         max-width: 33%;
+    }
+
+    main#discover-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .discover-section {
+        grid-template-areas: 
+        "title"
+        "image"
+        "description"
+        "address"
+        "learn-more"
+        ;
     }
 }

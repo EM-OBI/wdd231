@@ -419,3 +419,29 @@ if (currentPage.includes("thankyou.html")) {
     </div>
     `
 }
+
+//local storage
+document.addEventListener("DOMContentLoaded", function () {
+    const messageElement = document.querySelector(".visit-message");
+    const lastVisit = localStorage.getItem("lastVisit");
+
+    const currentTime = Date.now();
+
+    if (!lastVisit) {
+        messageElement.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        const lastVisitTime = parseInt(lastVisit, 10);
+        const timeDiff = currentTime - lastVisitTime;
+        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // Convert ms to days
+
+        if (daysDiff < 1) {
+            messageElement.textContent = "Back so soon! Awesome!";
+        } else {
+            const dayText = daysDiff === 1 ? "day" : "days";
+            messageElement.textContent = `You last visited ${daysDiff} ${dayText} ago.`;
+        }
+    }
+
+    // Store the current visit time
+    localStorage.setItem("lastVisit", currentTime);
+});

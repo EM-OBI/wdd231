@@ -3,8 +3,46 @@
         color: pink;
     }
 } */
-@media screen and (min-width: 320px) and (max-width: 640px) {
-    body {
-        /* color: pink; */
+@media screen and (min-width: 40rem) {
+    .discover-section {
+
+        display: grid;
+        grid-template-areas: 
+        "image title"
+        "image description"
+        "image address"
+        "learn-more ."
+        ;
+        gap: 5px;
+    }
+
+    h2.discover-heading {
+        grid-area: title;
+    }
+
+    figure.discover-figure {
+        grid-area: image;
+    }
+
+    p.discover-description {
+        grid-area: description;
+    }
+
+    .discover-image {
+        transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+        overflow: hidden;
+    }
+
+    .discover-image:hover {
+        transform: scale(1.01);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    figcaption {
+        padding-top: 0.5rem;
+    }
+
+    input#submit {
+        width: 80%;
     }
 }
