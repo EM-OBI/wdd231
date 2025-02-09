@@ -432,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         const lastVisitTime = parseInt(lastVisit, 10);
         const timeDiff = currentTime - lastVisitTime;
-        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // Convert ms to days
+        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
         if (daysDiff < 1) {
             messageElement.textContent = "Back so soon! Awesome!";
@@ -442,6 +442,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Store the current visit time
     localStorage.setItem("lastVisit", currentTime);
 });
