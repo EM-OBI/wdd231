@@ -25,6 +25,7 @@ const discoverPlaces = (places) => {
         discoverImage.setAttribute("alt", place.name);
         discoverImage.setAttribute("loading", "lazy");
         discoverImage.setAttribute("width", "300");
+        discoverImage.setAttribute("height", "200");
 
         discoverFigure.appendChild(discoverImage);
         discoverFigure.appendChild(discoverFigureCaption);
