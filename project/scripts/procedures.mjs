@@ -1,4 +1,4 @@
-const proceudresUrl = "/wdd231/project/data/procedures.json"; 
+const proceudresUrl = "./data/procedures.json"; 
 
 export async function getProcedures() {
     const response = await fetch(proceudresUrl);
