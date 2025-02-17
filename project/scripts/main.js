@@ -3,13 +3,14 @@ import { animate } from "./hero.mjs";
 import { getProcedures } from "./procedures.mjs";
 import modal from "./modal.mjs";
 import formAction from "./action.mjs";
-import breadCrumb from "./wayfinding.mjs";
+import { breadCrumb, highlightWay } from "./wayfinding.mjs";
 import localS from "./localstorage.mjs";
 
 const currentPage = window.location.pathname;
 
 nav();
 breadCrumb();
+highlightWay();
 
 if (currentPage.includes("index.html")) {
     animate();

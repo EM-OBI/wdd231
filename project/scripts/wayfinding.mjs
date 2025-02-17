@@ -1,4 +1,4 @@
-export default function breadCrumb() {
+export function breadCrumb() {
     const breadcrumbContainer = document.querySelector(".breadcrumb");
 
     const pages = {
@@ -20,3 +20,16 @@ export default function breadCrumb() {
 
     breadcrumbContainer.innerHTML = breadcrumbHTML;
 }
+
+export function highlightWay() {
+    const currentPage = window.location.pathname;
+    const navigationLinks = document.querySelectorAll(".side-nav-item a");
+    
+    navigationLinks.forEach(link => {
+        if (link.pathname === currentPage) {
+            link.classList.add("active-nav");
+        } else {
+            link.classList.remove("active-nav");
+        }
+    });
+};

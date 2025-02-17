@@ -525,6 +525,11 @@ input[type="submit"]:active {
     text-decoration: none;
     padding-left: 1rem;
 }
+
+.side-nav-item a.active-nav {
+    background: #0c0f0a;
+    color: #eee;
+}
 /* Wayfinding end */
 
 /* Visit Message Start */
