@@ -1,0 +1,66 @@
+{
+    "dental_procedures": [
+      {
+        "category": "Adult Dental Procedures",
+        "cover_url": "./images/adult.webp",
+        "procedures": [
+          {
+            "name": "Teeth Whitening (Professional Bleaching)",
+            "description": "A cosmetic treatment that removes stains and brightens teeth using professional-grade bleaching agents.",
+            "price": "₦300,000–₦900,000"
+          },
+          {
+            "name": "Porcelain Veneers",
+            "description": "Thin, custom-made ceramic shells bonded to the front of teeth to improve shape, size, and color.",
+            "price": "₦1,200,000–₦3,750,000 per tooth"
+          },
+          {
+            "name": "Dental Bonding",
+            "description": "A composite resin material is applied to repair chipped, discolored, or slightly misaligned teeth.",
+            "price": "₦450,000–₦900,000 per tooth"
+          },
+          {
+            "name": "Gum Contouring (Gingival Recontouring)",
+            "description": "A laser or surgical procedure that reshapes the gum line for a more balanced smile.",
+            "price": "₦750,000–₦4,500,000 (depends on extent)"
+          },
+          {
+            "name": "Clear Aligners (Invisalign or Similar)",
+            "description": "A series of nearly invisible plastic trays that gradually straighten teeth without traditional braces.",
+            "price": "₦4,500,000–₦12,000,000"
+          }
+        ]
+      },
+      {
+        "category": "Pediatric Dental Procedures",
+        "cover_url": "./images/pediatrics.webp",
+        "procedures": [
+          {
+            "name": "Fluoride Treatment",
+            "description": "A preventive treatment that strengthens enamel and reduces the risk of cavities in children’s teeth.",
+            "price": "₦30,000–₦75,000 per session"
+          },
+          {
+            "name": "Dental Sealants",
+            "description": "A thin protective coating applied to molars to prevent cavities by sealing out food and bacteria.",
+            "price": "₦45,000–₦90,000 per tooth"
+          },
+          {
+            "name": "Pulpotomy (Baby Root Canal)",
+            "description": "A procedure to remove infected pulp in a baby tooth while preserving the remaining healthy portion.",
+            "price": "₦225,000–₦600,000"
+          },
+          {
+            "name": "Stainless Steel Crowns (SSC)",
+            "description": "Pre-made metal crowns used to restore severely decayed or damaged primary (baby) teeth.",
+            "price": "₦375,000–₦900,000 per tooth"
+          },
+          {
+            "name": "Interceptive Orthodontics (Space Maintainers)",
+            "description": "Appliances that guide proper jaw and tooth development, often used to prevent future orthodontic issues.",
+            "price": "₦450,000–₦1,200,000"
+          }
+        ]
+      }
+    ]
+  }
